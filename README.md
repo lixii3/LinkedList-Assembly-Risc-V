@@ -7,11 +7,11 @@
 ![RISC-V](https://img.shields.io/badge/RISC--V-Assembly-blue?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Complete-success?style=for-the-badge)
 
-## 📋 Descrizione
+## Descrizione
 
 Implementazione completa di una **linked list** in Assembly RISC-V con parsing di comandi da stringa di input. Il progetto dimostra la gestione dinamica della memoria, manipolazione di puntatori e implementazione di algoritmi classici a basso livello.
 
-## ✨ Funzionalità Implementate
+## Funzionalità Implementate
 
 ### Comandi Base
 - **ADD(x)** - Aggiunge un carattere alla coda della lista
@@ -27,7 +27,7 @@ Implementazione completa di una **linked list** in Assembly RISC-V con parsing d
 - **Ordinamento intelligente**: Sort per categoria (maiuscole > minuscole > numeri > caratteri speciali)
 - **Gestione casi limite**: Lista vuota, un solo elemento, eliminazioni multiple
 
-## 🏗️ Struttura della Linked List
+## Struttura della Linked List
 
 Ogni nodo occupa **5 byte**:
 ```
@@ -42,7 +42,7 @@ Ogni nodo occupa **5 byte**:
 - **s4**: Numero di nodi nella lista
 - **s5**: Prossimo indirizzo libero per allocazione (inizia a 0x20000000)
 
-## 🚀 Come Eseguire
+## Come Eseguire
 
 ### Requisiti
 - **RARS** (RISC-V Assembler and Runtime Simulator) o
@@ -76,7 +76,7 @@ Ogni nodo occupa **5 byte**:
 3. Modifica la stringa `listInput` desiderata
 4. Clicca "Simulate" → "Run"
 
-## 📝 Sintassi dei Comandi
+## Sintassi dei Comandi
 
 ### Formato Generale
 ```
@@ -112,7 +112,7 @@ I comandi principali possono essere scritti in maiuscolo, ma il parser cerca la 
 ### Parametri Validi
 I caratteri accettati per ADD e DEL devono avere codice ASCII tra **32** (spazio) e **125** (})
 
-## 🔍 Dettaglio Implementazioni
+## Dettaglio Implementazioni
 
 ### 1. ADD(x) - Inserimento in Coda
 ```
@@ -174,7 +174,7 @@ Fase 2 (Pop): Scorre di nuovo la lista e poppa i caratteri, sovrascrivendo i dat
 Nota: Non modifica i puntatori, solo i dati dei nodi
 ```
 
-## 🧪 Test Cases Inclusi
+## Test Cases Inclusi
 
 Il codice include numerosi test commentati nella sezione `.data`:
 
@@ -202,7 +202,7 @@ Il codice include numerosi test commentati nella sezione `.data`:
 "ADD(C) ~ ADD(A) ~ ADD(B) ~ SORT ~ REV ~ PRINT"
 ```
 
-## 📊 Esempi di Output
+## Esempi di Output
 
 ### Esempio 1: Inserimento e stampa
 ```
@@ -228,7 +228,7 @@ Input:  ADD(X) ~ ADD(X) ~ ADD(X) ~ DEL(X) ~ PRINT
 Output: (lista vuota - solo newline)
 ```
 
-## 🏛️ Architettura del Codice
+## Architettura del Codice
 
 ### Sezioni Principali
 
@@ -254,7 +254,7 @@ Output: (lista vuota - solo newline)
    - `find_next_free_addr`: Gestione allocazione memoria
    - `check_valid_end`: Validazione fine comando
 
-## 🎯 Algoritmi e Tecniche Utilizzate
+## Algoritmi e Tecniche Utilizzate
 
 ### Pattern di Programmazione
 - **Ricorsione**: PRINT e SORT utilizzano chiamate ricorsive
@@ -291,7 +291,7 @@ Cambia il valore in `s5`:
 li s5, 0x20000000  # Cambia questo indirizzo
 ```
 
-## 🐛 Gestione Errori
+## Gestione Errori
 
 Il programma gestisce silenziosamente gli errori:
 - **Comando non valido**: Salta alla prossima tilde
@@ -299,7 +299,7 @@ Il programma gestisce silenziosamente gli errori:
 - **Lista vuota**: PRINT stampa solo newline, altre operazioni sono no-op
 - **Parametro non valido**: Comando ignorato
 
-## 📚 Concetti Didattici Dimostrati
+## Concetti Didattici Dimostrati
 
 Questo progetto copre numerosi concetti di architettura:
 - Gestione della memoria dinamica
@@ -311,22 +311,16 @@ Questo progetto copre numerosi concetti di architettura:
 - Parsing di stringhe
 - State machines
 
-## 🎓 Note per Studenti
+## Note per Studenti
 
-Questo progetto è eccellente per imparare:
+Questo progetto serve per imparare:
 - Come funzionano le linked list a livello di memoria
 - Gestione manuale dei puntatori
 - Differenza tra passaggio per valore e per riferimento
 - Stack frames e ricorsione
 - Complessità algoritmica in pratica
 
-## 📝 Licenza e Utilizzo
+## Licenza e Utilizzo
 
 Progetto realizzato per il corso di Architettura degli Elaboratori.  
 Utilizzabile a scopo didattico con citazione dell'autore.
-
----
-
-**Buono studio! 🚀**
-
-Per domande o suggerimenti, contatta l'autore tramite università.
